@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:audio_ott_app/theme/app_theme.dart';
 import 'package:audio_ott_app/controllers/auth_controller.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -81,6 +82,15 @@ class _SignupScreenState extends State<SignupScreen> {
         TextField(
           controller: _name,
           decoration: InputDecoration(
+            prefixIcon: Padding(
+              padding: const EdgeInsets.only(left: 12, right: 8),
+              child: FaIcon(
+                FontAwesomeIcons.user,
+                color: AppColors.textSecondary,
+                size: 18,
+              ),
+            ),
+            prefixIconConstraints: const BoxConstraints(minWidth: 48),
             hintText: 'Full name',
             filled: true,
             fillColor: AppColors.card,
@@ -98,6 +108,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 style: OutlinedButton.styleFrom(
                   backgroundColor: AppColors.card,
                   foregroundColor: AppColors.textPrimary,
+                  side: const BorderSide(color: Colors.grey),
                 ),
                 onPressed: () => Get.back(),
                 child: Text('Cancel', style: AppTextStyles.body),
@@ -134,6 +145,15 @@ class _SignupScreenState extends State<SignupScreen> {
         TextField(
           controller: _location,
           decoration: InputDecoration(
+            prefixIcon: Padding(
+              padding: const EdgeInsets.only(left: 12, right: 8),
+              child: FaIcon(
+                FontAwesomeIcons.locationDot,
+                color: AppColors.textSecondary,
+                size: 18,
+              ),
+            ),
+            prefixIconConstraints: const BoxConstraints(minWidth: 48),
             hintText: 'Location',
             filled: true,
             fillColor: AppColors.card,
@@ -147,6 +167,15 @@ class _SignupScreenState extends State<SignupScreen> {
         TextField(
           controller: _email,
           decoration: InputDecoration(
+            prefixIcon: Padding(
+              padding: const EdgeInsets.only(left: 12, right: 8),
+              child: FaIcon(
+                FontAwesomeIcons.envelope,
+                color: AppColors.textSecondary,
+                size: 18,
+              ),
+            ),
+            prefixIconConstraints: const BoxConstraints(minWidth: 48),
             hintText: 'Email',
             filled: true,
             fillColor: AppColors.card,
@@ -164,6 +193,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 style: OutlinedButton.styleFrom(
                   backgroundColor: AppColors.card,
                   foregroundColor: AppColors.textPrimary,
+                  side: const BorderSide(color: Colors.grey),
                 ),
                 onPressed: () => _page.previousPage(
                   duration: const Duration(milliseconds: 320),
@@ -236,6 +266,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 style: OutlinedButton.styleFrom(
                   backgroundColor: AppColors.card,
                   foregroundColor: AppColors.textPrimary,
+                  side: const BorderSide(color: Colors.grey),
                 ),
                 onPressed: () => _page.previousPage(
                   duration: const Duration(milliseconds: 320),
