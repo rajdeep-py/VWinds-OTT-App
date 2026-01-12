@@ -137,7 +137,7 @@ class AppDecorations {
   AppDecorations._();
 
   static BoxDecoration cardDecoration({double radius = 12.0}) => BoxDecoration(
-    color: AppColors.card,
+    color: AppColors.background,
     borderRadius: BorderRadius.circular(radius),
     boxShadow: [
       BoxShadow(
