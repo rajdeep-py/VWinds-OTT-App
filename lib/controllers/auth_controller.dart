@@ -39,7 +39,7 @@ class AuthController extends GetxController {
         id: DateTime.now().millisecondsSinceEpoch.toString(),
         phone: phone.value,
       );
-      Get.offAllNamed(AppRoutes.login);
+      Get.offAllNamed(AppRoutes.home);
       return true;
     } else {
       Get.snackbar(
